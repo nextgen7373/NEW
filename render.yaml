@@ -1,0 +1,26 @@
+# Render configuration for TriVault
+
+# Web Service for the backend
+services:
+  - type: web
+    name: trivault-backend
+    env: node
+    buildCommand: cd server && npm install && npm run build
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        value: mongodb+srv://mrunalnextgen:EcsMvLAGhlQqbRov@cluster0.ust065y.mongodb.net/trivault?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_URL
+        value: https://pwd-zeta.vercel.app
+      - key: ENCRYPTION_KEY
+        generateValue: true
+    plan: free
+    autoDeploy: true
