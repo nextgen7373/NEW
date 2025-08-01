@@ -19,7 +19,7 @@ services:
       - key: JWT_EXPIRES_IN
         value: 7d
       - key: FRONTEND_URL
-        value: https://pwd-zeta.vercel.app
+        value: https://new-chi-ashen.vercel.app
       - key: ENCRYPTION_KEY
         generateValue: true
     plan: free

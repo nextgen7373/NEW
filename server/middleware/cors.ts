@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 
 const allowedOrigins = [
+  'https://new-chi-ashen.vercel.app',
   'https://pwd-zeta.vercel.app',
   'http://localhost:8080',
   'http://localhost:5173' // Vite dev server
